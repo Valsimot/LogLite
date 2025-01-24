@@ -2,13 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quick Event Logger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>LogLite</title>
     <meta name="description" content="Record events with duration tracking and view statistics" />
-    <meta name="author" content="Lovable" />
+    <meta name="author" content="LogLite" />
     <meta property="og:image" content="/og-image.png" />
+    
+    <!-- iOS specific meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="LogLite">
+    
+    <!-- iOS icons -->
+    <link rel="apple-touch-icon" href="/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/icon-192x192.png">
+    
+    <!-- PWA manifest -->
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#FF6B6B" />
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192x192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/icon-512x512.png" />
   </head>
@@ -27,7 +42,6 @@
         });
       }
     </script>
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
