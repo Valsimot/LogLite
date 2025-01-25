@@ -23,18 +23,32 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot-1.png",
+      "src": "screenshot-record.png",
       "sizes": "1170x2532",
       "type": "image/png",
       "platform": "narrow",
-      "label": "Record Screen"
+      "label": "Record Screen - Press and hold to record events"
     },
     {
-      "src": "screenshot-2.png",
+      "src": "screenshot-stats.png",
       "sizes": "1170x2532",
       "type": "image/png",
       "platform": "narrow",
-      "label": "Statistics Screen"
+      "label": "Statistics Screen - View your recorded events"
+    },
+    {
+      "src": "screenshot-record-wide.png",
+      "sizes": "2048x1536",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Record Screen on Tablet"
+    },
+    {
+      "src": "screenshot-stats-wide.png",
+      "sizes": "2048x1536",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Statistics Screen on Tablet"
     }
   ],
   "categories": ["productivity", "utilities"],
