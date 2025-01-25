@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { format } from 'date-fns';
-import { Download } from 'lucide-react';
+import { Download, Lovable } from 'lucide-react';
 
 interface Event {
   timestamp: number;
@@ -30,7 +30,10 @@ export const StatsView = ({ events, onExport }: StatsViewProps) => {
   return (
     <div className="w-full max-w-4xl mx-auto p-6 space-y-8 animate-fade-in">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-semibold text-gray-800">Statistics</h2>
+        <div className="flex items-center gap-2">
+          <h2 className="text-2xl font-semibold text-gray-800">Statistics</h2>
+          <Lovable className="text-accent" size={24} />
+        </div>
         <button
           onClick={onExport}
           className="flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-100 hover:bg-neutral-200 transition-colors"
