@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { cn } from "@/lib/utils";
 
 interface RecordButtonProps {
@@ -30,9 +30,12 @@ export const RecordButton = ({ onRecord }: RecordButtonProps) => {
       className={cn(
         "w-32 h-32 rounded-full focus:outline-none transition-all duration-300",
         "bg-accent hover:bg-accent-hover shadow-lg",
-        "active:shadow-inner active:transform active:scale-95",
-        animating && "animate-button-press",
-        isPressed && "bg-accent-hover scale-95"
+        "relative after:absolute after:inset-0 after:rounded-full after:shadow-[0_0_0_0_rgba(255,107,107,0.7)]",
+        isPressed && [
+          "bg-accent-hover scale-95",
+          "after:animate-[pulse_2s_infinite]"
+        ],
+        animating && "animate-button-press"
       )}
       onMouseDown={handleStart}
       onMouseUp={handleEnd}
@@ -44,7 +47,8 @@ export const RecordButton = ({ onRecord }: RecordButtonProps) => {
       <span className="sr-only">Record Event</span>
       <div className={cn(
         "w-full h-full rounded-full flex items-center justify-center",
-        "text-white font-medium text-lg"
+        "text-white font-medium text-lg",
+        isPressed && "animate-pulse"
       )}>
         {isPressed ? "Recording..." : "Press"}
       </div>
