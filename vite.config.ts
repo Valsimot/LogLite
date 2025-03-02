@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    https: true, // Enable HTTPS in development
   },
   plugins: [
     react(),
@@ -34,6 +35,12 @@ export default defineConfig(({ mode }) => ({
             type: 'image/png'
           }
         ]
+      },
+      devOptions: {
+        enabled: true
+      },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       }
     })
   ].filter(Boolean),

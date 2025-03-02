@@ -1,21 +1,22 @@
+
 {
   "name": "LogLite",
   "short_name": "LogLite",
   "description": "Record events with duration tracking and view statistics",
-  "start_url": "/",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#FF6B6B",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "icon-192x192.png",
+      "src": "./icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "icon-512x512.png",
+      "src": "./icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -23,28 +24,28 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot-record.png",
+      "src": "./screenshot-record.png",
       "sizes": "1170x2532",
       "type": "image/png",
       "platform": "narrow",
       "label": "Record Screen - Press and hold to record events"
     },
     {
-      "src": "screenshot-stats.png",
+      "src": "./screenshot-stats.png",
       "sizes": "1170x2532",
       "type": "image/png",
       "platform": "narrow",
       "label": "Statistics Screen - View your recorded events"
     },
     {
-      "src": "screenshot-record-wide.png",
+      "src": "./screenshot-record-wide.png",
       "sizes": "2048x1536",
       "type": "image/png",
       "platform": "wide",
       "label": "Record Screen on Tablet"
     },
     {
-      "src": "screenshot-stats-wide.png",
+      "src": "./screenshot-stats-wide.png",
       "sizes": "2048x1536",
       "type": "image/png",
       "platform": "wide",
