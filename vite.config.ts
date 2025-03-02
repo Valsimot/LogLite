@@ -19,8 +19,8 @@ export default defineConfig(({ mode }) => ({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'icon-192x192.png', 'icon-512x512.png'],
       manifest: {
-        name: 'Quick Event Logger',
-        short_name: 'Event Logger',
+        name: 'LogLite',
+        short_name: 'LogLite',
         description: 'Record events with duration tracking and view statistics',
         theme_color: '#FF6B6B',
         background_color: '#FFFFFF',
