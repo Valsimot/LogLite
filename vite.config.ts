@@ -23,6 +23,7 @@ export default defineConfig(({ mode }) => ({
         short_name: 'Event Logger',
         description: 'Record events with duration tracking and view statistics',
         theme_color: '#FF6B6B',
+        background_color: '#FFFFFF',
         icons: [
           {
             src: 'icon-192x192.png',

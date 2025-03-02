@@ -5,7 +5,7 @@
   "description": "Record events with duration tracking and view statistics",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#FFFFFF",
   "theme_color": "#FF6B6B",
   "orientation": "portrait",
   "icons": [
