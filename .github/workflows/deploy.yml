@@ -35,7 +35,8 @@ jobs:
       - name: Configure for GitHub Pages
         run: |
           cp dist/index.html dist/404.html
-          echo "loglite.app" > dist/CNAME
+          touch dist/.nojekyll
+          echo "valsimot.github.io/LogLite" > dist/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -43,3 +44,4 @@ jobs:
           folder: dist
           branch: gh-pages
           clean: true
+
