@@ -18,6 +18,9 @@ export default defineConfig(({ mode }) => ({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'icon-192x192.png', 'icon-512x512.png'],
+      devOptions: {
+        enabled: false,
+      },
       manifest: {
         name: 'LogLite',
         short_name: 'LogLite',
