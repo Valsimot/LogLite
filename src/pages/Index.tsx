@@ -15,9 +15,18 @@ const Index = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    const savedEvents = localStorage.getItem('events');
-    if (savedEvents) {
-      setEvents(JSON.parse(savedEvents));
+    try {
+      const savedEvents = localStorage.getItem('events');
+      if (savedEvents) {
+        const parsed = JSON.parse(savedEvents);
+        if (Array.isArray(parsed) && parsed.every(e => typeof e.timestamp === 'number' && typeof e.duration === 'number')) {
+          setEvents(parsed);
+        } else {
+          localStorage.removeItem('events');
+        }
+      }
+    } catch {
+      localStorage.removeItem('events');
     }
   }, []);
 
@@ -38,11 +47,21 @@ const Index = () => {
   };
 
   const handleExport = () => {
+    const sanitizeCsvField = (field: string) => {
+      if (/^[=+\-@\t\r]/.test(field)) {
+        return `'${field}`;
+      }
+      if (field.includes(',') || field.includes('"') || field.includes('\n')) {
+        return `"${field.replace(/"/g, '""')}"`;
+      }
+      return field;
+    };
+
     const csvContent = [
       ['Timestamp', 'Duration (ms)'],
       ...events.map(event => [
-        new Date(event.timestamp).toISOString(),
-        event.duration.toString()
+        sanitizeCsvField(new Date(event.timestamp).toISOString()),
+        sanitizeCsvField(event.duration.toString())
       ])
     ].map(row => row.join(',')).join('\n');
 
